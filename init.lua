@@ -4,7 +4,7 @@ minetest.register_chatcommand("ssay", {
   params = "<message>",
   privs = {unisay=true},
   func = function(name, param)
-    minetest.chat_send_all("<"..minetest.colorize("#F00","server").."> "..param)
+    minetest.chat_send_all(minetest.colorize("#F00","server")..": "..param)
   end,
 })
 
@@ -17,7 +17,7 @@ minetest.register_chatcommand("usay", {
 	if not nick then
 		return false, minetest.colorize("#F00","Invalid usage, see /help usay")
 	end
-   minetest.chat_send_all("<"..nick.."> "..message)
+   minetest.chat_send_all(nick..": "..message)
   end,
 })
 
