@@ -4,7 +4,7 @@ minetest.register_chatcommand("ssay", {
   params = "<message>",
   privs = {unisay=true},
   func = function(name, param)
-    minetest.chat_send_all(minetest.colorize("#F00","server")..": "..param)
+    minetest.chat_send_all(minetest.colorize("#F00","[Server]")..": "..param)
   end,
 })
 
